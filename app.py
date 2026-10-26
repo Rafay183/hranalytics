@@ -163,7 +163,7 @@ with tab_overview:
     cols = st.columns(6)
     cards = [
         ("Employees", f"{len(df):,}", f"{int(df['AttritionFlag'].sum())} have left", C.NAVY),
-        ("Attrition rate", f"{rate:.1f}%",
+        ("Attrition rate", f"{rate:.3f}%",
          "company average" if abs(diff) < 0.05 else f"{diff:+.1f} pts vs company ({company_rate:.1f}%)", C.CORAL),
         ("Avg monthly income", f"${df['MonthlyIncome'].mean():,.0f}", f"median ${df['MonthlyIncome'].median():,.0f}", C.TEAL),
         ("Avg tenure", f"{df['YearsAtCompany'].mean():.1f} yrs", f"avg age {df['Age'].mean():.0f}", C.SAND),
